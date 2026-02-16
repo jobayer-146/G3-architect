@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 .work-sans-font {
@@ -6,6 +12,13 @@
   font-weight: 400;
   font-style: normal;
 }
+main>section {
+    margin-top: 130px;
+}
+body {
+    overflow-x: hidden;
+}
+
 .display-flex  {
     display: flex;
 }
@@ -20,11 +33,15 @@
 .text-light-gray {
        color: #424242;
 }
+.text-light-graye {
+       color: #726f6f;
+}
 .nav-bar {
     justify-content: space-between;
     align-items: center;
 }
 .brand {
+    padding: 20px 30px;
     font-weight: 700;
     font-size: 45px;
 }
@@ -37,8 +54,8 @@
     text-decoration: none;
     font-weight: 500;
 }
-.nav-bar, .banner {
-    max-width: 1200px;
+ .banner ,.nav-bar {
+    max-width: 1400px;
     width: 100%;
     margin: 0 auto;
 } 
@@ -48,18 +65,25 @@
     text-align: center;
     
 }
+.img {
+    width: 100%;
+    overflow: hidden;
+}
+
 img {
     width: 100%;
-    height: 400px;
-    width: 850px;
+    height: auto;
 }
-.banner-head {
+.banner-head h1{
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 4rem;
+    padding-bottom: 20px;
 }
-.banner-pragraph {
-    
+
+.banner-pragraph p {
+    padding-bottom: 20px;
 }
+
 .banner-btn button{
     background-color: #FF900E;
     color: white;
@@ -69,10 +93,60 @@ img {
     border-radius: 8px;
     border: none;
     margin-bottom: 30px;
+    margin-top: 20px;
 }
+
+/* team section start */
+
+.teams {
+    align-items: center;
+    gap: 50px;
+}
+
+.features-img-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+
+}
+.features-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.our-features {
+    max-width: 500px;
+}
+.our-features h3 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.our-features p {
+    font-weight: 300;
+}
+#quick-list {
+    font-weight: 500;
+}
+#features {
+    color: #FF900E;
+}
+/* responsive media quary */
 @media screen and (max-width:576px) {
-    .nav-bar, .nav-link {
+    .nav-bar, .nav-link .teams{
         flex-direction: column;
     }
-    
+.features-img-container {
+   grid-template-columns: repeat(1,1fr);
+}
+.our-features {
+    margin-left: 20px;
+}
+}
+/* medium size divice responsib media quary */
+@media screen and (min-width:982px) {
+    .teams {
+        /* flex-direction: column; */
+    }
+ 
 }
